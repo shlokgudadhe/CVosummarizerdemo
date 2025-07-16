@@ -1,6 +1,6 @@
 # README for Conversation Summarization Chatbot
 
-A Streamlit-based conversational AI chatbot featuring intelligent conversation summarization, session management, and efficient memory handling for maintaining context across extended conversations.
+A Streamlit-based demo featuring intelligent conversation summarization, session management, and efficient memory handling for maintaining context across extended conversations. The summarizer is supposed to be integrated with Gemini API calls for bot responses.
 
 ## Features
 
