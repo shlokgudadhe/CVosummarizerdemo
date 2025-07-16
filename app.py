@@ -318,14 +318,12 @@ if not st.session_state.messages:
 # API Keys
 try:
     GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
-    REPLICATE_API_TOKEN = st.secrets["REPLICATE_API_TOKEN"]
 except (FileNotFoundError, KeyError):
     st.warning("Secrets file not found. Falling back to environment variables.")
     GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
-    REPLICATE_API_TOKEN = os.environ.get("REAPI_TOKEN")
 
-if not GEMINI_API_KEY or not REPLICATE_API_TOKEN:
-    st.error("API keys for Gemini and Replicate are not configured. Please set them in .streamlit/secrets.toml or as environment variables.")
+if not GEMINI_API_KEY:
+    st.error("API key for Gemini is not configured. Please set them in .streamlit/secrets.toml or as environment variables.")
     st.stop()
 
 # UI
